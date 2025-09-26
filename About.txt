@@ -1,0 +1,14 @@
+I am writing this learn the keywords on the new things that I will learn throughout the project.
+so, Starting on json-server
+
+To run the API in the website we have to create a file in our desktop and it can be stored in anywhere after that
+I am creating like db and we need create a json file, I am created like "db.json", we can name as we want.
+
+After writing the json file we need run that.
+We have open commentpromt inside the db directory and write
+
+json-server --watch db.json
+
+You can see the API on port no 3000
+
+We can also change the api to our need.
