@@ -12,3 +12,18 @@ json-server --watch db.json
 You can see the API on port no 3000
 
 We can also change the api to our need.
+
+After that we are going to send the info to our API by using the Axios, first store the info in variables
+then we need axios to post the values to the API, where axios.post() has 2 parameters 1st one is path of 
+our API which is deployed and another one is object which has the variables that we store the info from our web page.
+
+Note: whenever we call the API, it will give the result late, so we need to use async before the method.
+async function will return the promise, whether we are returning something or not it will return the promises
+And await keyword used to pause the executiton of the function until the it gets the promise.
+
+Now we have the result, we can check the API page, It has update that means our API is working, then If we want
+to store the info in localstorage we can do localstorage.setItem("name_What_you_want", JSON.stringify(result.data))
+the result that we got is object.
+
+By saving the data in the localstorage can help the data stable even the web page gets refreshed. with this we can make
+sessions for the users...
