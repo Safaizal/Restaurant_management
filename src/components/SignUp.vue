@@ -43,6 +43,14 @@ export default {
         })
       }
     }
+  },
+  mounted () {
+    let user = localStorage.getItem('user_info')
+    if(user){
+      this.$router.push({
+          name : "HomePage"
+        })
+    }
   }
 }
 </script>

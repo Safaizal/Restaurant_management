@@ -6,7 +6,15 @@
 <script>
 
 export default {
-  name: "HomePage"
+  name: "HomePage",
+  mounted () {
+    let user = localStorage.getItem('user_info')
+    if(!user){
+      this.$router.push({
+          name : "SignUp"
+        })
+    }
+  }
 }
 
 </script>
