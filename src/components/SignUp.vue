@@ -37,8 +37,10 @@ export default {
 
       console.warn(result)
       if(result.status == 201){
-        alert("Successfully Signed up...")
         localStorage.setItem("user_info", JSON.stringify(result.data))
+        this.$router.push({
+          name : "HomePage"
+        })
       }
     }
   }

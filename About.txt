@@ -27,3 +27,59 @@ the result that we got is object.
 
 By saving the data in the localstorage can help the data stable even the web page gets refreshed. with this we can make
 sessions for the users...
+
+Now we are going to create a home component and routing to it from the sign up page, for routing we need
+vue-router@next
+where "@next" is for the latest version.
+and create a file routers.js 
+
+in that file we need to import the components to route and import these 
+import {createRouter, createWebHistory} from 'vue-router'
+
+create a routes array to give the path to each components
+
+const routes = [
+    {
+        name: "Home",
+        component: Home,
+        path: '/'
+    },
+    {
+        name: "SignUp",
+        component: SignUp,
+        path: '/SignUp'
+    }
+]
+
+like this and then 
+
+create the router 
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes
+})
+
+and export it then don't forgot to import the router on main.js 
+
+Note: Don't forget whenever creating the component it should be multi value like HomePage not like Home
+it is because it can create a conflict to the html tags like <home>
+
+After these we can't see the routers in the web page to do that we need to put this inside the template
+
+<router -view />
+
+Router should work.
+
+Now we need to route to the home page whenever the signup or user is created.
+
+for that we need to give this code this.$router.push({name:"Home"}) this home should be equal to the same thing 
+that you have written on the routes
+
+const routes = [
+    {
+        name: "Home", <--- THIS ONE
+        component: Home,
+        path: '/'
+    },
+]
