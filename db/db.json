@@ -29,6 +29,12 @@
       "email": "hina@mail.com",
       "name": "Hina ",
       "password": "345"
+    },
+    {
+      "id": "a0d6",
+      "email": "qwew@mail.com",
+      "name": "qeww",
+      "password": "1234"
     }
   ]
 }
