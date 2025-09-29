@@ -1,6 +1,7 @@
 <template>
 
   <h1> Home page </h1>
+  <router-link to="/login"> LogOut </router-link>
 
 </template>
 <script>

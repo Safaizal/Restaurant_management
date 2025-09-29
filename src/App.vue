@@ -23,7 +23,7 @@ export default {
 .logo {
   width: 150px;
 }
-.register input{
+.register input, .login input{
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -34,7 +34,7 @@ export default {
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
 }
-.register button{
+.register button, .login button{
   width: 320px;
   height: 40px;
   border: 1px solid rgb(0, 0, 0);

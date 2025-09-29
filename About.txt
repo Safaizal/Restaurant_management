@@ -83,3 +83,12 @@ const routes = [
         path: '/'
     },
 ]
+
+Now we need to use the api to login to the home page where we can do that with postman and json server, this json server provides a operation called 
+filter where 
+we have 
+
+http://localhost:3000/users?email=hina@mail.com&password=345
+
+we do like this in postman to filter the info but doing with json server like this is not safe, that's why we use backend server to authenticate these problems.
+for now our motive is to learn the Vue

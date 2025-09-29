@@ -1,24 +1,6 @@
 {
   "users": [
     {
-      "id": "c15e",
-      "email": "faizal@gmail.com",
-      "name": "Faizal",
-      "password": "12345"
-    },
-    {
-      "id": "0553",
-      "email": "faiz@mail.com",
-      "name": "faizal",
-      "password": "1234"
-    },
-    {
-      "id": "e8e5",
-      "email": "faizal@gmail.com",
-      "name": "Faizal",
-      "password": "1234"
-    },
-    {
       "id": "6b95",
       "email": "morishima@mail.com",
       "name": "Hodaka",
