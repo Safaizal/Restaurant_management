@@ -1,38 +1,48 @@
 <template>
-
-    <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">Add Restaurant</a>
-        <a href="#">Update Restaurant</a>
-        <a href="#">Logout</a>
-    </div>
+  <div class="nav">
+    <router-link to="/"> Home </router-link>
+    <router-link to="/add-rest"> Add Restaurant </router-link>
+    <router-link to="/update-rest"> Update Restaurant </router-link>
+    <a v-on:click="logout" href="#">Logout</a>
+  </div>
 
 </template>
 
 <script>
 
 export default {
-    name : "HeaderCom"
+  name: "HeaderCom",
+  methods: {
+    logout() {
+      localStorage.clear()
+      this.$router.push({
+        name: "LoginPage"
+      })
+    }
+  }
 }
 
 </script>
 
 <style>
-.nav{
-    background-color: black;
-    overflow: hidden;
+.nav {
+  background-color: black;
+  overflow: hidden;
 }
-.nav a{
-    float: left;
-    color: white;
-    padding: 15px 15px;
-    text-align: center;
-    text-decoration: none;
-    margin-right: 10px;
+
+.nav router-link,
+a {
+  float: left;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 10px;
 }
-.nav a:hover{
-    background-color: white;
-    color: black;
-    transition: 500ms;
+
+.nav a:hover {
+  background-color: white;
+  color: black;
+  transition: 500ms;
 }
 </style>
