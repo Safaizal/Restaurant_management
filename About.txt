@@ -92,3 +92,13 @@ http://localhost:3000/users?email=hina@mail.com&password=345
 
 we do like this in postman to filter the info but doing with json server like this is not safe, that's why we use backend server to authenticate these problems.
 for now our motive is to learn the Vue
+
+for posting the data by axios we use post method where this method gets two parameters 1st is link to the api
+and another one is object with values.
+
+axios.post (<link>, {
+    <name> : this.<name>,
+    ...
+})
+
+like this
