@@ -37,6 +37,18 @@
       "name": "pizza hut",
       "contact": 123456,
       "address": "4 lane, north street"
+    },
+    {
+      "id": "f606",
+      "name": "faizal",
+      "contact": 234,
+      "address": "4 lane, south street"
+    },
+    {
+      "id": "b753",
+      "name": "name1",
+      "contact": 23456,
+      "address": "234, street, milan"
     }
   ]
 }

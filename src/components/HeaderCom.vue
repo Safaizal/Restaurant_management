@@ -2,7 +2,6 @@
   <div class="nav">
     <router-link to="/"> Home </router-link>
     <router-link to="/add-rest"> Add Restaurant </router-link>
-    <router-link to="/update-rest"> Update Restaurant </router-link>
     <a v-on:click="logout" href="#">Logout</a>
   </div>
 
@@ -30,10 +29,9 @@ export default {
   overflow: hidden;
 }
 
-.nav router-link,
-a {
+.nav a {
   float: left;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 15px 15px;
   text-align: center;
   text-decoration: none;

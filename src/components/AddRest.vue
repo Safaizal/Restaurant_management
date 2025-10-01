@@ -4,12 +4,12 @@
 
   <h1>Add Restaurant</h1>
 
-  <div class="addition">
-    <input type="text" v-model="name" placeholder="Name">
-    <input type="number" v-model="contact" placeholder="Contact">
-    <input type="text" v-model="address" placeholder="Address">
-    <button v-on:click="add"> Submit </button>
-  </div>
+  <form class="addition">
+    <input type="text" v-model="restaurant.name" placeholder="Name">
+    <input type="number" v-model="restaurant.contact" placeholder="Contact">
+    <input type="text" v-model="restaurant.address" placeholder="Address">
+    <button type="button" v-on:click="add"> Submit </button>
+  </form>
 </template>
 
 <script>
@@ -21,9 +21,11 @@ export default {
   name: "AddRest",
   data () {
     return {
-      name : "",
-      contact : 0,
-      address : ""
+      restaurant : {
+        name : "",
+        contact : "",
+        address : ""
+      }
     }
   },
   components: {
@@ -32,12 +34,16 @@ export default {
   methods : {
     async add () {
       let result = await axios.post("http://localhost:3000/restaurant", {
-        name : this.name,
-        contact : this.contact,
-        address : this.address
+        name : this.restaurant.name,
+        contact : this.restaurant.contact,
+        address : this.restaurant.address
       })
 
-      console.warn(result)
+      if(result.status == 201){
+        this.$router.push({
+          name : "HomePage"
+        })
+      }
     }
   }
 }
