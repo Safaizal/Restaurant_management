@@ -35,9 +35,27 @@ export default {
   },
   methods : {
     async update () {
-      let result = await axios.get("http://localhost:3000/restaurant")
-      console.log(result)
+      const result = await axios.put("http://localhost:3000/restaurant/" + this.$route.params.id, this.restaurant)
+      if(result.status == 200){
+        this.$router.push({
+          name : "HomePage"
+        })
+      }
     }
+  },
+  async mounted () {
+    let user = localStorage.getItem("user_info")
+    if(!user){
+      this.$router.push({
+        name : "SignUp"
+      })
+    }
+
+    const result = await axios.get("http://localhost:3000/restaurant/" + this.$route.params.id)
+    
+    this.restaurant = result.data
+
+    //console.log(this.$route.params.id) // To get the id which passed in the router-link here the .id is written because in router.js file we put that update:id that's why
   }
 }
 </script>

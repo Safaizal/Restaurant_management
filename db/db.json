@@ -21,34 +21,16 @@
   ],
   "restaurant": [
     {
-      "id": 1,
+      "id": "a3dd",
+      "name": "qwerty",
+      "contact": 1234567,
+      "address": "qw, qwert, backern"
+    },
+    {
+      "id": "aab9",
       "name": "viva la vida",
-      "contact": 12345,
-      "address": "2 lane, west street"
-    },
-    {
-      "id": 2,
-      "name": "dominos",
-      "contact": 23456,
-      "address": "3 lane, west street"
-    },
-    {
-      "id": "e871",
-      "name": "pizza hut",
-      "contact": 123456,
-      "address": "4 lane, north street"
-    },
-    {
-      "id": "f606",
-      "name": "faizal",
-      "contact": 234,
-      "address": "4 lane, south street"
-    },
-    {
-      "id": "b753",
-      "name": "name1",
-      "contact": 23456,
-      "address": "234, street, milan"
+      "contact": 8765,
+      "address": "20, south street, tokyo"
     }
   ]
 }

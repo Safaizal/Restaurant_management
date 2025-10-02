@@ -13,6 +13,7 @@
         <td>Contact</td>
         <td>Address</td>
         <td>Actions</td>
+        <td>Delete</td>
       </tr>
       <tr v-for="item in restaurants" :key = "item.id">
         <td>{{ item.id }}</td>
@@ -20,6 +21,7 @@
         <td>{{ item.contact }}</td>
         <td>{{ item.address }}</td>
         <td><router-link :to="'/update-rest/'+item.id">Update</router-link></td>
+        <td><button v-on:click="deleteRest(item.id)">Delete</button></td>
       </tr>
     </table>
   </div>
@@ -41,17 +43,30 @@ export default {
   components : {
     HeaderCom
   },
-  async mounted () {
-    let user = localStorage.getItem('user_info')
-    this.name = JSON.parse(user).name
-    if(!user){
-      this.$router.push({
-          name : "SignUp"
-        })
+  methods : {
+    async deleteRest (id) {
+      // console.log(id)
+      let result = await axios.delete("http://localhost:3000/restaurant/" + id)
+      if(result.status == 200){
+        this.load()
+      }
+    },
+    async load () {
+      let user = localStorage.getItem('user_info')
+      this.name = JSON.parse(user).name
+      if(!user){
+        this.$router.push({
+            name : "SignUp"
+          })
+      }
+      let result = await axios.get("http://localhost:3000/restaurant")
+      // console.warn(result)
+      this.restaurants = result.data
     }
-    let result = await axios.get("http://localhost:3000/restaurant")
-    // console.warn(result)
-    this.restaurants = result.data
+
+  },
+  async mounted () {
+    this.load()
   }
 }
 
